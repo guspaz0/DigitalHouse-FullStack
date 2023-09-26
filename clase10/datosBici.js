@@ -1,9 +1,4 @@
-const bicicletas = require('./bicicletas.json');
+const fs = require('fs')
+const bicicletas = fs.readFileSync(__dirname+'/bicicletas.json', 'utf-8');
 
-//console.log(bicicletas)
-
-let stringBicis = JSON.stringify(bicicletas);
-
-console.log(stringBicis)
-
-module.exports = stringBicis
+module.exports = JSON.parse(bicicletas)
