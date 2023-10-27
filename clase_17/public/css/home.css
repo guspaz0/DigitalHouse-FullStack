@@ -1,3 +1,22 @@
+main {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    background-color: #EAC926;;
+}
 .ultimasVistas, div, img {
     width: 200px;
+}
+.ultimasVistas, .titulares {
+    font-size: 24px;
+}
+.precios {
+    font-size: 18px;
+}
+.descuentos {
+    font-size: 16px;
+}
+.descripciones {
+    font-size: 16px;
 }
