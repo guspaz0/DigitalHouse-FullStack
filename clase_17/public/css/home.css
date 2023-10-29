@@ -1,12 +1,48 @@
-main {
+html {
     font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
 }
-
+p {
+    margin-block-start: 0em;
+}
+section {
+    background-color: white;
+}
 nav {
-    background-color: #EAC926;;
+    background-color: #EAC926;
+    padding-bottom: 1em;
 }
-.ultimasVistas, div, img {
-    width: 200px;
+main nav img {
+    max-width: 100%;
+    width: 40%;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin: 0px;
+    list-style-type: none;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+a {
+    text-decoration:none
+}
+main img {
+    max-width: 100%;
+    width: auto;
+}
+section.ultimasVistas div img {
+    max-width: 100%;
+    width: auto;
 }
 .ultimasVistas, .titulares {
     font-size: 24px;
@@ -16,7 +52,55 @@ nav {
 }
 .descuentos {
     font-size: 16px;
+    color: #39b54a;
 }
 .descripciones {
     font-size: 16px;
+}
+
+section .ultimasVistas div p {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main nav i {
+    size: 2em;
+    padding: 10px;
+}
+footer {
+    text-align: center;
+    text-justify: inter-word;
+    
+}
+footer section {
+    font-size: 12px;
+    color: #666;
+    padding-bottom: 10px;
+
+}
+footer h4 {
+    font-size: 16px;
+    color: #666;
+    margin: 0px;
+}
+footer section i {
+    color: #1259c3;
+    font-size: 2em;
+    margin-top: 2em;
+    text-justify: inter-word;
+}
+main nav div.burger-menu {
+    font-size: 24px;
+    text-align: center;
+}
+
+main nav div.burger-menu i {
+    border-radius: 5px;
+    color: #ebebeb;
+    background-color: #1259c3;
+    width: fit-content;
+}
+
+.compraCuotas {
+    text-align: center;
 }
