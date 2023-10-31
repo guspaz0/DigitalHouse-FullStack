@@ -2,6 +2,13 @@ html {
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
 }
+main {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    align-items: center;
+}
 p {
     margin-block-start: 0em;
 }
@@ -104,3 +111,5 @@ main nav div.burger-menu i {
 .compraCuotas {
     text-align: center;
 }
+
+@media ()

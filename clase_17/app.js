@@ -1,7 +1,8 @@
 const express = require('express')
 const morgan = require('morgan')
 const path = require('path')
-const PORT = "8000"
+require("dotenv").config();
+const {HOST, PORT} = process.env
 const app = express()
 
 
@@ -13,5 +14,5 @@ app.get('/', (req,res) => {
 });
 
 app.listen(PORT,(req,res) => {
-    console.log(`Server corriendo en puerto ${PORT}`)
+    console.log(`Server corriendo en puerto http://${HOST}:${PORT}`)
 });
