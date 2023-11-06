@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Mercado Liebre</title>
         <link href="\css\home.css" rel="stylesheet"/>
+        <link href="\css\login.css" rel="stylesheet"/>
         <link 
             rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
             integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -44,11 +45,11 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
-        <form action="" method="POST">
+        <form class="loginForm" method="POST">
             <label for="username">Usuario</label>
-            <input type="text" name="username" placeholder="Nombre de usuario"/>
+            <input id="username" type="text" name="username" placeholder="Ingresar usuario"/>
             <label for="password">Contraseña</label>
-            <input type="password" name="password" placeholder="Elegí tu contraseña"/>
+            <input id="password" type="password" name="password" placeholder="Ingresar tu contraseña"/>
             <button type="submit">Enviar</button>
         </form>
     </main>
