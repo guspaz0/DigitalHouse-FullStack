@@ -19,10 +19,12 @@
         <nav>
             <div>
                 <img src="\images\logo-mercado-liebre.svg"/>
-                <input type="search" placeholder="buscar productos..."/>
-                <button class='searchBtn' name="searchProduct">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+                <span class="searchnav">
+                    <input type="search" placeholder="buscar productos..."/>
+                    <button class='searchBtn' name="searchProduct">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </span>
                 <p class="compraCuotas">
                     <i class="fa-solid fa-hand-holding-dollar"></i>
                     Comprá en cuotas y sin tarjeta de crédito
@@ -45,11 +47,30 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
-        <form action="" method="POST">
+        <form class="registerForm" action="/register" method="POST">
+            <label for="nameAndLastName">Nombre y apellido</label>
+            <input type="text" id="nameAndLastName" name="nameAndLastName" placeholder="Nombre y Apellido"/>
             <label for="username">Usuario</label>
-            <input type="text" name="username" placeholder="Nombre de usuario"/>
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" placeholder="Elegí tu contraseña"/>
+            <input type="text" id="username" name="username" placeholder="Nombre de usuario"/>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="E-mail"/>
+            <label for="birthday">Fecha de nacimiendo</label>
+            <input type="date" id="birthday" name="birthday"/>
+            <label for="street">Domicilio</label>
+            <input type="text" id="street" name="street" placeholder="domicilio"/>
+            <label for="profile">Perfil del usuario</label>
+            <select id="profile" name="profile">
+                <option value="seller">Vendedor</option>
+                <option value="buyer">Comprador</option>
+            </select>
+            <label for="interests">Intereses</label>
+            <span class="interests">
+                <p><input type="checkbox" name="interests" value="electro"/>Electro</p>
+                <p><input type="checkbox" name="interests" value="moda"/>Moda</p>
+                <p><input type="checkbox" name="interests" value="hogar">Hogar</input></p>
+                <p><input type="checkbox" name="interests" value="jugeteria">Jugueteria</input></p>
+                <p><input type="checkbox" name="interests" value="vidaSana">Vida sana</input></p>
+            </span>
             <button type="submit">Enviar</button>
         </form>
     </main>
