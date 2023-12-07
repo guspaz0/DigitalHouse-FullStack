@@ -1,4 +1,6 @@
+const { json } = require('express');
 const products = require('./productsDataBase.json')
+const fs = require('fs')
 
 const productService = {
     edit: function (data) {
@@ -16,6 +18,7 @@ const productService = {
 					[keys[i]]: data[keys[i]]
 				}
 			}
+			fs.writeFileSync(__dirname+'/productsDataBase.json', JSON)
 			if(i == keys.length-1) return productData
 		}
     },
