@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form action='form' method="POST">
+      <label>
+        ingrese su nombre
+        <input type="text" name="nombre" required/>
+      </label>
+      <label> colores
+        <select name="color" required>
+          <option value="red">rojo</option>
+          <option value="yellow">amarillo</option>
+          <option value="green">verde</option>
+          <option value="blue">azul</option>
+        </select>
+      </label>
+      <label>email:
+        <input type="email" name="email" required/>
+      </label>
+      <label>edad:
+        <input type="number" name="edad" required/>
+      </label>
+      <input type="submit" value="ENVIAR">
+    </form>
+  </body>
+</html>

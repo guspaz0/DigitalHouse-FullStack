@@ -1,6 +1,10 @@
-const { json } = require('express');
-const products = require('./productsDataBase.json')
+
+//const products = require('./productsDataBase.json')
 const fs = require('fs')
+const path = require('path')
+
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productService = {
     edit: function (data) {
@@ -18,10 +22,19 @@ const productService = {
 					[keys[i]]: data[keys[i]]
 				}
 			}
-			fs.writeFileSync(__dirname+'/productsDataBase.json', JSON)
-			if(i == keys.length-1) return productData
+			if(i == keys.length-1) {
+				const updateProduct = [...products, productData].sort((a,b) => a.id - b.id)
+				fs.writeFileSync(productsFilePath, JSON.stringify(updateProduct,0,4),'utf-8')
+				return productData
+			}
 		}
     },
+	create: function (data) {
+		const id = Math.max(...products.map((x) => {return x.id}))
+		let newProducts = [...products, { id, ...data }]
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts,0,4), 'utf-8')
+		return  {id, ...data}
+	}
 };
 
 module.exports = productService

@@ -25,12 +25,14 @@ const controller = {
 	// Create - Form to create
 	create: (req, res) => {
 		// Do the magic
-		res.render('product-create-form', {  })
+		res.render('product-create-form')
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => {
 		// Do the magic
+		let response = productService.create(req.body)
+		res.status(200).json(response)
 	},
 
 	// Update - Form to edit
